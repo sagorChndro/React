@@ -8,6 +8,10 @@ export default function BinarySearch() {
     resizeText();
 
     window.addEventListener("resize", resizeText);
+
+    return ()=>{
+        window.removeEventListener("resize", resizeText);
+    }
   },[]);
 
   function resizeText(){
@@ -45,4 +49,3 @@ export default function BinarySearch() {
     </div>
   );
 }
-
